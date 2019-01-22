@@ -1,0 +1,30 @@
+{
+  "name": "gulp-bitrix-templates-toolkit",
+  "version": "1.0.0",
+  "description": "Set of configurable Gulp tasks for use in CMS Bitrix templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mvandrew/gulp-bitrix-templates-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mvandrew/gulp-bitrix-templates-toolkit/issues"
+  },
+  "homepage": "https://github.com/mvandrew/gulp-bitrix-templates-toolkit#readme",
+  "keywords": [
+    "bitrix",
+    "gulp",
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Andrey Mishchenko <info@msav.ru> (http://www.msav.ru/)",
+  "license": "MIT",
+  "files": [
+    "LICENSE",
+    "index.js",
+    "lib"
+  ]
+}
