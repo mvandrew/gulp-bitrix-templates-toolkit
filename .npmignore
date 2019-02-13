@@ -66,3 +66,4 @@ package-lock.json
 yarn.lock
 
 _index.js
+npm-bump.bat
