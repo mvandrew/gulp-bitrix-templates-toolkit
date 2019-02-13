@@ -1,6 +1,6 @@
 {
   "name": "gulp-bitrix-templates-toolkit",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Set of configurable Gulp tasks for use in CMS Bitrix templates",
   "main": "index.js",
   "scripts": {
