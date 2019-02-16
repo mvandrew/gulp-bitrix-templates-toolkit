@@ -5,6 +5,7 @@ module.exports = scriptPath => {
         mbx.path.join(scriptPath, "tasks", "vendor-js.js"),
         mbx.path.join(scriptPath, "tasks", "vendor-css.js"),
 
+        mbx.path.join(scriptPath, "tasks", "theme-img.js"),
         mbx.path.join(scriptPath, "tasks", "theme-js.js"),
         mbx.path.join(scriptPath, "tasks", "theme-sass.js"),
 
