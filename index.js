@@ -1,45 +1,47 @@
-const { posix }             = require("path");
+const path                  = require("path");
 
-module.exports          = projectPath => {
-    const rootPath          = projectPath;                              // Каталог проекта
-    const srcPath           = posix.join(rootPath, "src");              // Каталог с исходниками
-    const assetsPath        = posix.join(rootPath, "assets");           // Каталог со статическими ресурсами
-    const componentsPath    = posix.join(rootPath, "components");       // Каталог шаблонов компонент
-    const nodePath          = posix.join(rootPath, "node_modules");     // Каталог node модулей
+module.exports              = projectPath => {
+    const rootPath              = projectPath;                              // Каталог проекта
+    const srcPath               = path.join(rootPath, "src");              // Каталог с исходниками
+    const assetsPath            = path.join(rootPath, "assets");           // Каталог со статическими ресурсами
+    const componentsPath        = path.join(rootPath, "components");       // Каталог шаблонов компонент
+    const localComponentsPath   = path.join(rootPath, "../../components");  // Каталог локальных компонент (!!! не опечатка - для выхода из каталога темы)
+    const nodePath              = path.join(rootPath, "node_modules");     // Каталог node модулей
 
     return {
-        devMode:            true,               // Режим разработки по-умолчанию
-        rootPath:           rootPath,           // Каталог проекта
-        srcPath:            srcPath,            // Каталог с исходниками
-        assetsPath:         assetsPath,         // Каталог со статическими ресурсами
-        componentsPath:     componentsPath,     // Каталог шаблонов компонент
-        nodePath:           nodePath,           // Каталог node модулей
+        devMode:                true,                                       // Режим разработки по-умолчанию
+        rootPath:               rootPath,                                   // Каталог проекта
+        srcPath:                srcPath,                                    // Каталог с исходниками
+        assetsPath:             assetsPath,                                 // Каталог со статическими ресурсами
+        componentsPath:         componentsPath,                             // Каталог шаблонов компонент
+        localComponentsPath:    localComponentsPath,                        // Каталог локальных компонент
+        nodePath:               nodePath,                                   // Каталог node модулей
 
-        vendorCssFile:      "vendor.css",                       // Имя файла сборки CSS библиотек
-        vendorCssDest:      posix.join(assetsPath, "css"),      // Расположение файла сборки CSS библиотек
-        vendorCssSrc:       [],                                 // Массив подключаемых библиотек CSS
+        vendorCssFile:      "vendor.css",                                   // Имя файла сборки CSS библиотек
+        vendorCssDest:      path.join(assetsPath, "css"),                  // Расположение файла сборки CSS библиотек
+        vendorCssSrc:       [],                                             // Массив подключаемых библиотек CSS
 
-        vendorJsFile:       "vendor.js",                        // Имя файла сборки JS библиотек
-        vendorJsDest:       posix.join(assetsPath, "js"),       // Расположение файла сборки JS библиотек
-        vendorJsSrc:        [],                                 // Массив подключаемых библиотек JS
+        vendorJsFile:       "vendor.js",                                    // Имя файла сборки JS библиотек
+        vendorJsDest:       path.join(assetsPath, "js"),                   // Расположение файла сборки JS библиотек
+        vendorJsSrc:        [],                                             // Массив подключаемых библиотек JS
 
         browserSyncHost:    "http://localhost",
         browserSyncFiles:   [
-            posix.join(rootPath, "*.php"),
-            posix.join(rootPath, "**/*.php"),
-            posix.join(rootPath, "**/.*/*.php"),
-            posix.join(rootPath, "**/.*/**/*.php"),
+            path.join(rootPath, "*.php"),
+            path.join(rootPath, "**/*.php"),
+            path.join(rootPath, "**/.*/*.php"),
+            path.join(rootPath, "**/.*/**/*.php"),
 
-            posix.join(rootPath, "*.css"),
-            posix.join(assetsPath, "css/*.css"),
-            posix.join(componentsPath, "**/*.css"),
-            posix.join(componentsPath, "**/.*/*.css"),
-            posix.join(componentsPath, "**/.*/**/*.css"),
-
-            posix.join(assetsPath, "js/*.js"),
-            posix.join(componentsPath, "**/*.js"),
-            posix.join(componentsPath, "**/.*/*.js"),
-            posix.join(componentsPath, "**/.*/**/*.js"),
+            path.join(rootPath, "*.css"),
+            // path.join(assetsPath, "css/*.css"),
+            // path.join(componentsPath, "**/*.css"),
+            // path.join(componentsPath, "**/.*/*.css"),
+            // path.join(componentsPath, "**/.*/**/*.css"),
+            //
+            // path.join(assetsPath, "js/*.js"),
+            // path.join(componentsPath, "**/*.js"),
+            // path.join(componentsPath, "**/.*/*.js"),
+            // path.join(componentsPath, "**/.*/**/*.js"),
 
             "!" + srcPath,
             "!" + nodePath
