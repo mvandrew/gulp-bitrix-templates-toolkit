@@ -6,3 +6,10 @@ Set of configurable Gulp tasks for use in Bitrix templates.
 В стадии разработки.
 
 Under development.
+
+## Установка
+
+Установка может быть выполнена с использованием пакетных менеджеров:
+
+* **npm**: ```npm install --save-dev gulp-bitrix-templates-toolkit```
+* **yarn**: ```yarn add -D gulp-bitrix-templates-toolkit```
