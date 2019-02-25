@@ -9,6 +9,7 @@ module.exports = scriptPath => {
         mbx.path.join(scriptPath, "tasks", "theme-js.js"),
         mbx.path.join(scriptPath, "tasks", "theme-sass.js"),
 
+        mbx.path.join(scriptPath, "tasks", "components-images.js"),
         mbx.path.join(scriptPath, "tasks", "components-js.js"),
         mbx.path.join(scriptPath, "tasks", "components-sass.js"),
 
