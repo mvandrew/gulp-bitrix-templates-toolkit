@@ -9,7 +9,15 @@ Under development.
 
 ## Установка
 
-Установка может быть выполнена с использованием пакетных менеджеров:
+### Установка с использованием пакетных менеджеров
 
-* **npm**: ```npm install --save-dev gulp-bitrix-templates-toolkit```
-* **yarn**: ```yarn add -D gulp-bitrix-templates-toolkit```
+**npm**: 
+```
+$ npm install --save-dev gulp-bitrix-templates-toolkit
+```
+**yarn**:
+```
+yarn add -D gulp-bitrix-templates-toolkit
+```
+
+### Клонирование репозитория в проект
