@@ -11,3 +11,7 @@ deploy:
     secure: ${API_TOKEN}
   on:
     tags: true
+
+branches:
+  only:
+    - master
