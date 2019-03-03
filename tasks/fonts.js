@@ -1,5 +1,5 @@
 
-module.exports = mbx => {
+module.exports = () => {
     mbx.gulp.task("fonts", () => {
         return mbx.gulp.src(mbx.config.fontFiles)
             .pipe( mbx.plumber({ errorHandler: function(err) {
