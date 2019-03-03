@@ -1,7 +1,7 @@
 const libJsConcat = require("../lib/js-concat");
 
-module.exports = () => {
+module.exports = mbx => {
     mbx.gulp.task("vendor-js", () => {
-        return libJsConcat(mbx.config.vendorJsSrc, mbx.config.vendorJsFile, mbx.config.vendorJsDest);
+        return libJsConcat(mbx, mbx.config.vendorJsSrc, mbx.config.vendorJsFile, mbx.config.vendorJsDest);
     });
 };

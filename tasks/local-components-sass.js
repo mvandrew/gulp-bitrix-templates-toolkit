@@ -1,12 +1,12 @@
 const libSass = require("../lib/components-sass");
 
-module.exports = () => {
+module.exports = mbx => {
     mbx.gulp.task("local-components-sass", () => {
         const src   = [
             mbx.path.join(mbx.config.localComponentsPath, "/**/src/*.scss"),
             mbx.path.join(mbx.config.localComponentsPath, "/**/.default/src/*.scss")
         ];
         const dest = mbx.config.localComponentsPath;
-        return libSass(src, dest);
+        return libSass(mbx, src, dest);
     });
 };
