@@ -25,11 +25,11 @@ const config                = (projectPath, siteUrl) => {
 
         vendorCssFile:      "vendor.css",                                   // Имя файла сборки CSS библиотек
         vendorCssDest:      path.join(assetsPath, "css"),                  // Расположение файла сборки CSS библиотек
-        vendorCssSrc:       [],                                             // Массив подключаемых библиотек CSS
+        vendorCssSrc:       [path.join(__dirname, "dummy", "dummy.css")],                                             // Массив подключаемых библиотек CSS
 
         vendorJsFile:       "vendor.js",                                    // Имя файла сборки JS библиотек
         vendorJsDest:       path.join(assetsPath, "js"),                   // Расположение файла сборки JS библиотек
-        vendorJsSrc:        [],                                             // Массив подключаемых библиотек JS
+        vendorJsSrc:        [path.join(__dirname, "dummy", "dummy.js")],                                             // Массив подключаемых библиотек JS
 
         browserSyncHost:    typeof siteUrl == "undefined" ? "http://localhost" : siteUrl,
         browserSyncFiles:   [
@@ -53,7 +53,7 @@ const config                = (projectPath, siteUrl) => {
             "!" + nodePath
         ],
 
-        fontFiles: [] // Массив источников файлов шрифтов для переноса в каталог ресурсов темы оформления
+        fontFiles: [path.join(__dirname, "dummy", "dummy.ttf")] // Массив источников файлов шрифтов для переноса в каталог ресурсов темы оформления
     };
 };
 
