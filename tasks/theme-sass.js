@@ -1,9 +1,9 @@
 const libSass = require("../lib/sass");
 
-module.exports = mbx => {
+module.exports = () => {
     mbx.gulp.task("theme-sass", () => {
         const src   = mbx.path.join(mbx.config.srcPath, "sass", "/**/*.scss");
         const dest  = mbx.path.join(mbx.config.assetsPath, "css");
-        return libSass(mbx, src, dest);
+        return libSass(src, dest);
     });
 };

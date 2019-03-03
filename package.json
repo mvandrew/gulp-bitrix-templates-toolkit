@@ -27,7 +27,8 @@
     "README.md",
     "index.js",
     "lib",
-    "tasks"
+    "tasks",
+    "dummy"
   ],
   "dependencies": {
     "@babel/core": "^7.3.4",

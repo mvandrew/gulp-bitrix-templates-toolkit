@@ -1,5 +1,5 @@
 
-module.exports = mbx => {
+module.exports = () => {
     mbx.gulp.task("browser-sync", () => {
         return mbx.browserSync.init(mbx.config.browserSyncFiles, {
             proxy: {
