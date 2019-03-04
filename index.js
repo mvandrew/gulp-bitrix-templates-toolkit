@@ -90,8 +90,7 @@ const initGlobal = (projectPath, siteUrl, useProjectPath) => {
         merge:                      rq('merge-stream', projectPath, useProjectPath),
         imageResize:                rq('gulp-image-resize', projectPath, useProjectPath),
         spritesmith:                rq('gulp.spritesmith', projectPath, useProjectPath),
-        buffer:                     rq('vinyl-buffer', projectPath, useProjectPath),
-        bundle:                     rq("gulp-bundle-assets", projectPath, useProjectPath)
+        buffer:                     rq('vinyl-buffer', projectPath, useProjectPath)
     };
 };
 module.exports.initGlobal = initGlobal;
