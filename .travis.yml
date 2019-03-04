@@ -10,8 +10,5 @@ deploy:
   api_key:
     secure: ${API_TOKEN}
   on:
+    branch: master
     tags: true
-
-branches:
-  only:
-    - master
