@@ -1,6 +1,6 @@
 {
   "name": "gulp-bitrix-templates-toolkit",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Gulp Tasks для сборки шаблона 1С-Битрикс",
   "main": "index.js",
   "scripts": {
