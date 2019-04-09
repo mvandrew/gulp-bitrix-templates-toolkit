@@ -5,11 +5,7 @@
 ![](https://img.shields.io/npm/v/gulp-bitrix-templates-toolkit.svg?label=npm%20package&style=flat)
 [![Dependencies](https://img.shields.io/david/mvandrew/gulp-bitrix-templates-toolkit.svg)](https://david-dm.org/mvandrew/gulp-bitrix-templates-toolkit)
 
-Set of configurable Gulp tasks for use in Bitrix templates.
-
-В стадии разработки.
-
-Under development.
+Set of configurable Gulp tasks for use in Bitrix CMS templates.
 
 ## Установка
 
@@ -24,7 +20,52 @@ $ npm install --save-dev gulp-bitrix-templates-toolkit
 yarn add -D gulp-bitrix-templates-toolkit
 ```
 
-## Как обрабатываются файлы
+## Пример gulpfile.js
+
+Скрипт ```gulpfile.js``` следует размещать в корне шаблона оформления: ```local/templates/[Каталог темы]/gulpfile.js```.
+
+Списки файлов для сборки фалов стилей и скриптов поставщиков приведены для примера. Их следует заменить используемыми ресурсами в конкретном проекте.
+
+Аналогичная ситуация с файлами шрифтов, которые размещаются в каталоге ресурсов шаблона оформления. 
+
+```javascript
+const MBXTemplate = require("gulp-bitrix-templates-toolkit");
+MBXTemplate.initGlobal(__dirname, "https://site.ru", true);
+
+// Стили для включения в общий файл стилей vendor.css
+//
+mbx.config.vendorCssSrc = [
+    mbx.path.join(mbx.config.nodePath, "normalize.css/normalize.css"),
+    mbx.path.join(mbx.config.nodePath, "lightbox2/src/css/lightbox.css")
+];
+
+// Скрипты для включения в общий файл скриптов vendor.js
+//
+mbx.config.vendorJsSrc = [
+    mbx.path.join(mbx.config.nodePath, "jquery/dist/jquery.min.js"),
+    mbx.path.join(mbx.config.nodePath, "jquery-match-height/dist/jquery.matchHeight-min.js"),
+    mbx.path.join(mbx.config.nodePath, "owl.carousel/dist/owl.carousel.min.js"),
+    mbx.path.join(mbx.config.nodePath, "lightbox2/src/js/lightbox.js")
+];
+
+// Пути к файлам шрифтов для копирования в каталог ресурсов шаблона оформления
+//
+const fontsSourcePath = mbx.path.join(mbx.config.srcPath, "fonts");
+mbx.config.fontFiles = [
+    mbx.path.join(fontsSourcePath, "font-awesome-4/fonts",      "*.+(otf|eot|svg|ttf|woff|woff2)"),
+    mbx.path.join(fontsSourcePath, "roboto/fonts",              "*.+(otf|eot|svg|ttf|woff|woff2)"),
+    mbx.path.join(fontsSourcePath, "robotoslab/fonts",          "*.+(otf|eot|svg|ttf|woff|woff2)")
+];
+
+MBXTemplate.initTasks();
+```
+
+Если пакет добавлен в проект в виде репозитория или модуля, то для инициализации константы ```MBXTemplate``` следует указать:
+```javascript
+const MBXTemplate = require("./src/scripts");
+```
+
+## Обработка исходных файлов по-умолчанию
 
 Набор скриптов уже включает в себя функции сборки основных файлов шаблона оформления сайта, шаблонов оформления компонент в шаблоне сайта и шаблонов оформления собственных компонент в каталоге ```local/components```.
 
