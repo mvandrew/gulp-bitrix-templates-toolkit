@@ -31,10 +31,10 @@
     "dummy"
   ],
   "dependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
     "browser-sync": "^2.26.3",
-    "del": "^4.0.0",
+    "del": "^4.1.0",
     "fs": "0.0.1-security",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
