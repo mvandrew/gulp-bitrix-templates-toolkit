@@ -75,9 +75,9 @@ const MBXTemplate = require("./src/scripts");
 
 | Назначение                         | Исходный файл | Собранный файл |
 | ---------------------------------- | ------------- | -------------- |
-| Стили шаблона                      | local/templates/[Каталог темы]/src/sass/*.+(sass|scss) | local/templates/[Каталог темы]/assets/css/[file name].css |
-| Стили компонент шаблона            | local/templates/[Каталог темы]/components/[Namespace]/[Component Name]/[Template]/src/*.+(sass|scss) | local/templates/[Каталог темы]/components/[Namespace]/[Component Name]/[Template]/[file name].css |
-| Стили шаблонов локальных компонент | local/components/[Namespace]/[Component Name]/templates/[Template]/src/*.+(sass|scss) | local/components/[Namespace]/[Component Name]/templates/[Template]/[file name].css |
+| Стили шаблона                      | local/templates/[Каталог темы]/src/sass/*.scss(sass) | local/templates/[Каталог темы]/assets/css/[file name].css |
+| Стили компонент шаблона            | local/templates/[Каталог темы]/components/[Namespace]/[Component Name]/[Template]/src/*.scss(sass) | local/templates/[Каталог темы]/components/[Namespace]/[Component Name]/[Template]/[file name].css |
+| Стили шаблонов локальных компонент | local/components/[Namespace]/[Component Name]/templates/[Template]/src/*.scss(sass) | local/components/[Namespace]/[Component Name]/templates/[Template]/[file name].css |
 
 ## Клонирование репозитория в проект
 
