@@ -71,13 +71,13 @@ const MBXTemplate = require("./src/scripts");
 
 ### Файлы стилей
 
-Обратите внимание, что обрабатываются только исходники в формате .scss.
+Обрабатываются исходники в формате scss и sass.
 
 | Назначение                         | Исходный файл | Собранный файл |
 | ---------------------------------- | ------------- | -------------- |
-| Стили шаблона                      | local/templates/[Каталог темы]/src/sass/*.scss | local/templates/[Каталог темы]/assets/css/[file name].css |
-| Стили компонент шаблона            | local/templates/[Каталог темы]/components/[Namespace]/[Component Name]/[Template]/src/*.scss | local/templates/[Каталог темы]/components/[Namespace]/[Component Name]/[Template]/[file name].css |
-| Стили шаблонов локальных компонент | local/components/[Namespace]/[Component Name]/templates/[Template]/src/*.scss | local/components/[Namespace]/[Component Name]/templates/[Template]/[file name].css |
+| Стили шаблона                      | local/templates/[Каталог темы]/src/sass/*.+(sass|scss) | local/templates/[Каталог темы]/assets/css/[file name].css |
+| Стили компонент шаблона            | local/templates/[Каталог темы]/components/[Namespace]/[Component Name]/[Template]/src/*.+(sass|scss) | local/templates/[Каталог темы]/components/[Namespace]/[Component Name]/[Template]/[file name].css |
+| Стили шаблонов локальных компонент | local/components/[Namespace]/[Component Name]/templates/[Template]/src/*.+(sass|scss) | local/components/[Namespace]/[Component Name]/templates/[Template]/[file name].css |
 
 ## Клонирование репозитория в проект
 
